@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "63575218749",
+    "project_id": "what-now--app",
+    "storage_bucket": "what-now--app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63575218749:android:550fe9afe54fb66f242854",
+        "android_client_info": {
+          "package_name": "com.example.whatnow"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCh972l3yG0yC3rTEQF5ySOvZyQuYquGps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
