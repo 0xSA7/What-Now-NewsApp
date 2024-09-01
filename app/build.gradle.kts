@@ -1,7 +1,10 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")}
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
+    id("com.google.gms.google-services")
+
+}
 
 android {
     namespace = "com.example.whatnow"
@@ -44,6 +47,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.firebase.auth.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -51,5 +55,10 @@ dependencies {
     implementation (libs.converter.gson)
     implementation (libs.glide)
     implementation(libs.androidx.swiperefreshlayout)
+
+    implementation(platform("com.google.firebase:firebase-bom:33.2.0"))
+    implementation ("com.google.android.material:material:1.9.0")
+    implementation("com.google.firebase:firebase-auth")
+
 
 }
