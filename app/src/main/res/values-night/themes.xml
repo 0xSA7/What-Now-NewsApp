@@ -10,6 +10,12 @@
 
     <!--Dark Mode -->
 
+    <!--use this style name in main Layout-->
+    <style name="SCREEN">
+        <item name="android:background">#121212</item>
+    </style>
+
+
     <!--use this style name in textView or any view has text-->
     <style name="TEXT">
         <item name="android:textColor">#FFFFFF</item>
