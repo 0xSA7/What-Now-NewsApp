@@ -4,4 +4,36 @@
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
+
+
+
+
+    <!--Dark Mode -->
+
+    <!--use this style name in main Layout-->
+    <style name="SCREEN">
+        <item name="android:background">#121212</item>
+    </style>
+
+
+    <!--use this style name in textView or any view has text-->
+    <style name="TEXT">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+
+    <!--use this style name in secondary textView or any view has text-->
+    <style name="SECONDARY_TEXT">
+        <item name="android:textColor">#B0B0B0</item>
+    </style>
+
+
+
+    <!--use this style name in button view-->
+    <style name="BUTTON">
+        <item name="android:background">#0D47A1</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+
 </resources>
