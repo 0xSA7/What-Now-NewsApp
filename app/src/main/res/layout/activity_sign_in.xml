@@ -1,24 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/brush_background"
-    android:gravity="center_horizontal"
     android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/brush_background"
     android:paddingStart="24dp"
     android:paddingEnd="24dp"
     android:paddingTop="32dp"
-    android:paddingBottom="32dp">
-
-    <ImageView
-        android:id="@+id/cloud_image"
-        android:layout_width="300dp"
-        android:layout_height="180dp"
-        android:layout_marginBottom="32dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/news_pic" />
+    android:paddingBottom="32dp"
+    tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/email_et"
@@ -48,37 +42,33 @@
         android:textColorHint="#757575"
         android:textSize="16sp" />
 
-    <EditText
-        android:id="@+id/con_pass_et"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:background="@drawable/rectangular_edit_text"
-        android:hint="Confirm Password"
-        android:inputType="textPassword"
-        android:padding="12dp"
-        android:layout_marginBottom="24dp"
-        android:elevation="2dp"
-        android:textColor="@android:color/black"
-        android:textColorHint="#757575"
-        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/forgot_pass_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="Forgot your password?"
+        android:textColor="#2196F3"
+        android:textSize="14sp"
+        android:layout_marginBottom="24dp" />
 
     <Button
-        android:id="@+id/sign_up_btn"
+        android:id="@+id/login_btn"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:backgroundTint="#2196F3"
-        android:text="Sign Up"
+        android:text="Login"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:elevation="2dp"
         android:layout_marginBottom="16dp" />
 
     <TextView
-        android:id="@+id/already_user_tv"
+        android:id="@+id/not_user_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Already a user?"
+        android:text="Not a user?"
         android:textColor="#2196F3"
         android:textSize="16sp"
         android:layout_marginBottom="24dp" />
