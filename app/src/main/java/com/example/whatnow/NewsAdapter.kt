@@ -42,7 +42,7 @@ class NewsAdapter(val activity: Activity, val newsList: ArrayList<Articles>) :
             val intent = Intent(Intent.ACTION_VIEW, url.toUri())
             activity.startActivity(intent)
         }
-        holder.binding.shareButton.setOnClickListener {
+        holder.binding.shareBtn.setOnClickListener {
             ShareCompat
                 .IntentBuilder(activity)
                 .setType("text/plain")

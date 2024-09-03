@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.isVisible
+import com.example.whatnow.api.SettingAPI
 import com.example.whatnow.databinding.ActivitySignInBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -61,8 +62,9 @@ class SignInActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     binding.progress.isVisible = false
                     if (auth.currentUser!!.isEmailVerified) {
-                        val i = Intent(this , MainActivity::class.java)
-                        startActivity(i)
+//                        val i = Intent(this , MainActivity::class.java)
+//                        startActivity(i)
+                        startActivity(Intent(this, SettingAPI::class.java))
                         finish()
                     } else {
                         Toast.makeText(this, "Please verify your email first", Toast.LENGTH_SHORT).show()
