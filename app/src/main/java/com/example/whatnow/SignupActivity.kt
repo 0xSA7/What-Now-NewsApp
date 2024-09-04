@@ -53,7 +53,7 @@ class SignupActivity : AppCompatActivity() {
                 pass != conPass ->
                     Toast.makeText(this, "Passwords don't match", Toast.LENGTH_SHORT).show()
                 else -> {
-                    binding.progress.isVisible = true
+                   /// binding.progress.isVisible = true
                     signUpUser(email, pass)
                 }
             }
@@ -68,7 +68,7 @@ class SignupActivity : AppCompatActivity() {
                 } else {
                     val message = task.exception?.message ?: "Sign up failed"
                     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-                    binding.progress.isVisible = false
+                   // binding.progress.isVisible = false
                 }
             }
     }
@@ -81,7 +81,7 @@ class SignupActivity : AppCompatActivity() {
                 } else {
                     Toast.makeText(this, "Failed to send verification email", Toast.LENGTH_SHORT).show()
                 }
-                binding.progress.isVisible = false
+                //binding.progress.isVisible = false
             }
     }
 }
