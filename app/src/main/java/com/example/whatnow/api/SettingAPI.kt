@@ -56,10 +56,10 @@ class SettingAPI : AppCompatActivity() {
                 .filter { it.isNotEmpty() }
                 .joinToString("+") { it.replace(Regex("[^A-Za-z0-9]"), "") }
             val query = APIBuilder.topHeadlinesCall(
-                country = Countries.returnThisAsEnum(
+                country = Countries.returnAsEnum(
                     countrySpinner.selectedItem.toString().uppercase()
                 ),
-                category = Categories.returnThisAsEnum(
+                category = Categories.returnAsEnum(
                     categoriesSpinner.selectedItem.toString().uppercase()
                 ),
                 q = topics

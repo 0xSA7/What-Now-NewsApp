@@ -10,7 +10,7 @@ enum class Categories(val code: String) {
     TECHNOLOGY("technology"),
     None("");
     companion object{
-        fun returnThisAsEnum(toBeReturnedAsEnum: String): Categories {
+        fun returnAsEnum(toBeReturnedAsEnum: String): Categories {
             for (category in entries) {
                 if (category.toString() == toBeReturnedAsEnum) {
                     return category

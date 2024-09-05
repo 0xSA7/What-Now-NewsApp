@@ -1,19 +1,31 @@
 package com.example.whatnow.api
 
+
 enum class Languages(val code: String) {
-    AR("ar"),
-    DE("de"),
-    EN("en"),
-    ES("es"),
-    FR("fr"),
-    HE("he"),
-    IT("it"),
-    NL("nl"),
-    NO("no"),
-    PT("pt"),
-    RU("ru"),
-    SV("sv"),
-    UD("ud"),
-    ZH("zh"),
+    Arabic("ar"),
+    German("de"),
+    English("en"),
+    Spanish("es"),
+    French("fr"),
+    Italian("it"),
+    Dutch("nl"),
+    Norwegian("no"),
+    Portuguese("pt"),
+    Russian("ru"),
+    Swedish("sv"),
+    Urdu("ud"),
+    Chinese("zh"),
     None("");
+
+    companion object {
+            fun returnAsEnum(toBeReturnedAsEnum: String): Languages {
+                for (Language in Languages.entries) {
+                    if (Language.toString() == toBeReturnedAsEnum) {
+                        return Language
+
+                    }
+                }
+                return Languages.None
+            }
+    }
 }

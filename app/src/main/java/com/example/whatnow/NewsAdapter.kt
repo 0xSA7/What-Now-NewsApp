@@ -1,6 +1,6 @@
 package com.example.whatnow
 
-import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
@@ -13,7 +13,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.whatnow.databinding.ArticalListItemBinding
 
-class NewsAdapter(val activity: Activity, val newsList: ArrayList<Articles>) :
+class NewsAdapter(val activity: Context, val newsList: ArrayList<Articles>) :
     Adapter<NewsAdapter.NewsViewHolder>() {
     class NewsViewHolder(val binding: ArticalListItemBinding) : ViewHolder(binding.root)
 
