@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">What Now!</string>
+
+    //onboarding
+        //Headings
+        <string name="heading_one">Quick &amp; Easy Payments</string>
+        <string name="heading_two">Instant Notifications</string>
+        <string name="heading_three">Cashless Payment</string>
+        <string name="heading_fourth">Pay Anywhere</string>
+
+        //Description
+        <string name="desc_one">Grow your Knoldge By our news app </string>
+        <string name="desc_two">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
+        <string name="desc_three">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
+        <string name="desc_fourth">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
+    <string name="Sp_what_now">What Now</string>
+    <string name="Sp_your_news_at_any_time">Your News At Any Time</string>
+    <string name="news_image">news_Image</string>
+    <string name="dots">...</string>
+    <string name="shareic">shareic</string>
+
 </resources>

@@ -16,6 +16,7 @@
             android:id="@+id/artical_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:contentDescription="@string/news_image"
             android:scaleType="centerCrop"
             Tools:srcCompat="@tools:sample/backgrounds/scenic"
             app:layout_constraintDimensionRatio="H,16:9"
@@ -47,7 +48,7 @@
             style="@style/TvStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="..."
+            android:text="@string/dots"
             app:layout_constraintBottom_toBottomOf="@id/artical_title"
             app:layout_constraintStart_toEndOf="@id/artical_title" />
 
@@ -57,7 +58,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:backgroundTint="@color/white"
-            android:src="@drawable/share"
+            android:contentDescription="@string/shareic"
+            android:src="@drawable/ic_share"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
