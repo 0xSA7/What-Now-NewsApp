@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">What Now!</string>
-    <string name="lottie_url">https://lottie.host/58e6c622-ae8a-476d-ace8-9d5bcd82e30e/FwOA9dmLpR.json</string>
+    <string name="lottie_url">https://lottie.host/cc04d862-3d3d-4167-a229-df440dbf0d41/ogbeuXTkK8.json</string>
     <string-array name="countries_array">
         <item>Select a country</item>
         <item>Argentina</item>
@@ -38,4 +38,21 @@
         <item>Sports</item>
         <item>Technology</item>
     </string-array>
+    <string-array name="languages_array">
+        <item>Select a language</item>
+        <item>Arabic</item>
+        <item>German</item>
+        <item>English</item>
+        <item>Spanish</item>
+        <item>French</item>
+        <item>Italian</item>
+        <item>Dutch</item>
+        <item>Norwegian</item>
+        <item>Portuguese</item>
+        <item>Russian</item>
+        <item>Swedish</item>
+        <item>Urdu</item>
+        <item>Chinese</item>
+    </string-array>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

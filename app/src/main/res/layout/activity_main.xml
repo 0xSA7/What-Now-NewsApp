@@ -6,6 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/brush_background"
+    android:clipChildren="false"
+    android:clipToPadding="false"
     tools:context=".MainActivity">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -22,10 +24,18 @@
             tools:listitem="@layout/artical_list_item" />
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-    <com.google.android.material.search.SearchBar
-        android:id="@+id/search_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <ImageButton
+        android:id="@+id/search_ib"
+        android:src="@drawable/ic_search"
+        android:background="@color/white"
+        android:alpha="0.5"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="600dp"
+        android:layout_gravity="center"
+        android:id="@+id/fragment_container"/>
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/progress_bar"

@@ -1,5 +1,6 @@
 package com.example.whatnow.api
 
+import android.util.Log
 import com.example.whatnow.BuildConfig
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
@@ -16,6 +17,7 @@ class APIBuilder {
             language: Languages = Languages.None,
             sortBy: SortBy = SortBy.None
         ): String {
+            Log.d("APIBuilder", "Query entered to everything call: $query" )
             return baseChunk() + BuildConfig.API_Topics_Everything + addQuery(query) + addDomains(
                 domains,
                 excludeDomains
@@ -28,7 +30,11 @@ class APIBuilder {
             category: Categories = Categories.None,
             q: String = ""
         ): String {
-            return baseChunk() + BuildConfig.API_Topics_Top_Headlines + addCountry(country) + addCategory(
+            var finalCountry = country
+            if (country == Countries.None && category == Categories.None && q.isEmpty()) {
+                finalCountry = Countries.US
+            }
+            return baseChunk() + BuildConfig.API_Topics_Top_Headlines + addCountry(finalCountry) + addCategory(
                 category
             ) + addQuery(q) + addAPIKey()
         }
@@ -67,13 +73,13 @@ class APIBuilder {
         }
 
         private fun addDomains(Domains: String = "", excludeDomains: String = ""): String {
-            if (Domains.isNotEmpty() && excludeDomains.isNotEmpty()) {
-                return BuildConfig.API_Domains + Domains + "&" + BuildConfig.API_Exclude_Domains + excludeDomains
+            return if (Domains.isNotEmpty() && excludeDomains.isNotEmpty()) {
+                BuildConfig.API_Domains + Domains + "&" + BuildConfig.API_Exclude_Domains + excludeDomains
             } else if (Domains.isNotEmpty()) {
-                return BuildConfig.API_Domains + Domains + "&"
+                BuildConfig.API_Domains + Domains + "&"
             } else if (excludeDomains.isNotEmpty()) {
-                return BuildConfig.API_Exclude_Domains + excludeDomains + "&"
-            } else return ""
+                BuildConfig.API_Exclude_Domains + excludeDomains + "&"
+            } else ""
         }
 
         private fun addQuery(query: String): String {
@@ -94,7 +100,7 @@ class APIBuilder {
             }
         }
 
-        fun baseChunk(): String {
+        private fun baseChunk(): String {
             return BuildConfig.API_baseUrl + BuildConfig.API_Version
         }
 

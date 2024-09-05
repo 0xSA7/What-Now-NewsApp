@@ -24,10 +24,10 @@ enum class Countries(val code: String) {
     TURKEY("tr"),
     UAE("ae"),
     UNITED_KINGDOM("gb"),
-    USA("us"),
+    US("us"),
     None("");
     companion object{
-        fun returnThisAsEnum(toBeReturnedAsEnum: String): Countries {
+        fun returnAsEnum(toBeReturnedAsEnum: String): Countries {
             for (country in entries) {
                 if (country.toString() == toBeReturnedAsEnum) {
                     return country
