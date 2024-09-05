@@ -60,6 +60,7 @@ class NewsManager(
         })
     }
 
+
     private fun showNews(articles: ArrayList<Articles>) {
         val adapter = NewsAdapter(context, articles)
         binding.newsList.adapter = adapter
