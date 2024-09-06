@@ -28,7 +28,7 @@
         android:layout_marginBottom="16dp"
         android:background="@drawable/rectangular_edit_text"
         android:elevation="2dp"
-        android:hint="Email"
+        android:hint="@string/sign_in_1"
         android:inputType="textEmailAddress"
         android:padding="12dp"
         android:textColor="@android:color/black"
@@ -43,7 +43,7 @@
         android:layout_marginBottom="16dp"
         android:background="@drawable/rectangular_edit_text"
         android:elevation="2dp"
-        android:hint="Password"
+        android:hint="@string/sign_in_2"
         android:inputType="textPassword"
         android:padding="12dp"
         android:textColor="@android:color/black"
@@ -58,7 +58,7 @@
         android:layout_marginBottom="24dp"
         android:background="@drawable/rectangular_edit_text"
         android:elevation="2dp"
-        android:hint="Confirm Password"
+        android:hint="@string/sign_up_1"
         android:inputType="textPassword"
         android:padding="12dp"
         android:textColor="@android:color/black"
@@ -73,7 +73,7 @@
         android:layout_marginBottom="16dp"
         android:backgroundTint="#2196F3"
         android:elevation="2dp"
-        android:text="Sign Up"
+        android:text="@string/sign_up_2"
         android:textColor="@android:color/white"
         android:textSize="18sp" />
 
@@ -84,7 +84,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="24dp"
-        android:text="Already a user?"
+        android:text="@string/sign_up_3"
         android:textColor="#2196F3"
         android:textSize="16sp" />
 

@@ -1,4 +1,4 @@
-package com.example.whatnow
+package com.example.whatnow.firebase_auth
 
 import android.content.Context
 import android.content.Intent
@@ -9,7 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.isVisible
+import com.example.whatnow.R
 import com.example.whatnow.api.SettingAPI
 import com.example.whatnow.databinding.ActivitySignInBinding
 import com.google.firebase.auth.FirebaseAuth

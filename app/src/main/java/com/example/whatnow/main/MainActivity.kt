@@ -1,7 +1,6 @@
-package com.example.whatnow
+package com.example.whatnow.main
 
 import SearchFragment
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
@@ -9,14 +8,16 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import com.airbnb.lottie.LottieAnimationView
+import com.example.whatnow.BuildConfig
+import com.example.whatnow.R
 import com.example.whatnow.api.APIBuilder
 import com.example.whatnow.api.Countries
 import com.example.whatnow.api.DefaultRetrofitFactory
 import com.example.whatnow.api.Languages
 import com.example.whatnow.api.NewsCallable
-import com.example.whatnow.api.SortBy
 import com.example.whatnow.databinding.ActivityMainBinding
+import com.example.whatnow.news.NewsManager
+import com.example.whatnow.news.NoNewsFragment
 
 class MainActivity : AppCompatActivity(), SearchFragment.OnSearchListener {
     private lateinit var binding: ActivityMainBinding
@@ -36,7 +37,14 @@ class MainActivity : AppCompatActivity(), SearchFragment.OnSearchListener {
         val newsCallable = retrofit.create(NewsCallable::class.java)
         newsManager = NewsManager(this, binding, newsCallable)
 
-        val query = APIBuilder.topHeadlinesCall()
+
+        val query =
+            if (getSharedPreferences("UserPrefs", MODE_PRIVATE).getString("query", "") != "") {
+                getSharedPreferences("UserPrefs", MODE_PRIVATE).getString("query", "")!!
+            } else APIBuilder.Builder(BuildConfig.API_Topics_Top_Headlines)
+                .setCountry(Countries.US)
+                .build()
+                .buildUrl()
         newsManager.loadNews(query)
         binding.swipeRefresh.setOnRefreshListener { newsManager.loadNews(query) }
 
@@ -63,9 +71,11 @@ class MainActivity : AppCompatActivity(), SearchFragment.OnSearchListener {
             .addToBackStack(null)
             .commit()
     }
+
     fun showNoNewsFragment() {
         replaceFragment(NoNewsFragment())
     }
+
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, fragment)

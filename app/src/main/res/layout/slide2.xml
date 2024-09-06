@@ -23,7 +23,7 @@
         android:text="@string/heading_one"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="28dp" />
+        android:textSize="28sp" />
 
     <TextView
         android:id="@+id/textdeccription"
@@ -34,7 +34,7 @@
         android:text="@string/desc_one"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="16dp" />
+        android:textSize="16sp" />
 
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.whatnow
+package com.example.whatnow.ui
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -11,6 +11,7 @@ import androidx.appcompat.widget.SwitchCompat
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.whatnow.R
 import java.util.Locale
 
 class SettingsActivity : AppCompatActivity() {

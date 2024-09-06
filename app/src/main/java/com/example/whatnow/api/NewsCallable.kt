@@ -1,6 +1,6 @@
 package com.example.whatnow.api
 
-import com.example.whatnow.News
+import com.example.whatnow.news.News
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Url

@@ -12,7 +12,7 @@
     android:paddingTop="32dp"
     android:paddingEnd="24dp"
     android:paddingBottom="32dp"
-    tools:context=".MainActivity">
+    tools:context=".main.MainActivity">
 
     <EditText
         android:id="@+id/email_et"
@@ -22,7 +22,7 @@
         android:background="@drawable/rectangular_edit_text"
         android:elevation="2dp"
         style="@style/TEXT"
-        android:hint="Email"
+        android:hint="@string/sign_in_1"
         android:inputType="textEmailAddress"
         android:padding="12dp"
         android:textColor="@android:color/black"
@@ -36,7 +36,7 @@
         android:layout_marginBottom="16dp"
         android:background="@drawable/rectangular_edit_text"
         android:elevation="2dp"
-        android:hint="Password"
+        android:hint="@string/sign_in_2"
         android:inputType="textPassword"
         android:padding="12dp"
         style="@style/TEXT"
@@ -51,7 +51,7 @@
         android:layout_gravity="end"
         android:layout_marginBottom="24dp"
         style="@style/TEXT"
-        android:text="Forgot your password?"
+        android:text="@string/sign_in_3"
         android:textColor="#2196F3"
         android:textSize="14sp" />
 
@@ -62,7 +62,7 @@
         android:layout_marginBottom="16dp"
         android:backgroundTint="#2196F3"
         android:elevation="2dp"
-        android:text="Login"
+        android:text="@string/sign_in_4"
         android:textColor="@android:color/white"
         style="@style/BUTTON"
         android:textSize="18sp" />
@@ -73,7 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="24dp"
-        android:text="Not a user?"
+        android:text="@string/sign_in_5"
         android:textColor="#2196F3"
         style="@style/TEXT"
         android:textSize="16sp" />

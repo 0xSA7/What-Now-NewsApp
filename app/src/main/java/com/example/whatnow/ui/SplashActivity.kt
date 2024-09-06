@@ -1,4 +1,4 @@
-package com.example.whatnow
+package com.example.whatnow.ui
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -10,6 +10,9 @@ import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.whatnow.R
+import com.example.whatnow.firebase_auth.SignInActivity
+import com.example.whatnow.firebase_auth.SignupActivity
 
 class SplashActivity : AppCompatActivity() {
 
@@ -38,7 +41,7 @@ class SplashActivity : AppCompatActivity() {
                 Intent(this, Onboarding::class.java)
             } else {
                 Log.d("SplashActivity", "Redirecting to SignupActivity")
-                Intent(this, SignupActivity::class.java)
+                Intent(this, SignInActivity::class.java)
             }
 
             Log.d("SplashActivity", "Starting intent: ${intent.component?.className}")

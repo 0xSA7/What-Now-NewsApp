@@ -52,16 +52,16 @@
             app:layout_constraintBottom_toBottomOf="@id/artical_title"
             app:layout_constraintStart_toEndOf="@id/artical_title" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/favorite_btn"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="8dp"
-            android:src="@drawable/heart"
-            app:layout_constraintEnd_toStartOf="@id/share_btn"
-            app:layout_constraintTop_toTopOf="@id/share_btn"
-            app:layout_constraintStart_toStartOf="@id/share_btn"/>
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/favorite_btn"-->
+<!--            style="@style/Widget.AppCompat.Button.Borderless"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            android:src="@drawable/heart"-->
+<!--            app:layout_constraintEnd_toStartOf="@id/share_btn"-->
+<!--            app:layout_constraintTop_toTopOf="@id/share_btn"-->
+<!--            app:layout_constraintStart_toStartOf="@id/share_btn"/>-->
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/share_btn"
@@ -71,7 +71,6 @@
             android:layout_margin="8dp"
             android:src="@drawable/ic_share"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/favorite_btn"
             app:layout_constraintTop_toTopOf="@id/shadow_view" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

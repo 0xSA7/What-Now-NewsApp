@@ -16,18 +16,18 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".SplashActivity"
+            android:name=".ui.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Onboarding" />
-        <activity android:name=".SignInActivity" />
-        <activity android:name=".SignupActivity" />
+        <activity android:name=".ui.Onboarding" />
+        <activity android:name=".firebase_auth.SignInActivity" />
+        <activity android:name=".firebase_auth.SignupActivity" />
         <activity android:name=".api.SettingAPI" />
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".main.MainActivity"/>
 
         <meta-data
             android:name="preloaded_fonts"

@@ -1,4 +1,4 @@
-package com.example.whatnow
+package com.example.whatnow.news
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.whatnow.main.MainActivity
 import com.example.whatnow.databinding.FragmentNoNewsBinding
 
 class NoNewsFragment : Fragment() {

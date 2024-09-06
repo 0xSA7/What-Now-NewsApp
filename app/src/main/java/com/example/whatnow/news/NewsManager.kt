@@ -1,8 +1,11 @@
-package com.example.whatnow
+package com.example.whatnow.news
 
 import android.content.Context
 import android.util.Log
 import androidx.core.view.isVisible
+import com.example.whatnow.BuildConfig
+import com.example.whatnow.main.MainActivity
+import com.example.whatnow.adapter.NewsAdapter
 import com.example.whatnow.api.APIBuilder
 import com.example.whatnow.api.Languages
 import com.example.whatnow.api.NewsCallable
@@ -20,14 +23,19 @@ class NewsManager(
 
     fun performSearch(
         query: String,
-        domains: String = "",
-        excludeDomains: String = "",
         from: String = "",
         to: String = "",
         language: Languages = Languages.None,
         sortBy: SortBy = SortBy.None
     ) {
-        val queryUrl = APIBuilder.everythingCall(query, domains, excludeDomains, from, to, language, sortBy)
+        val queryUrl = APIBuilder.Builder(BuildConfig.API_Topics_Everything)
+            .setQuery(query)
+            .setFromDate(from)
+            .setToDate(to)
+            .setLanguage(language)
+            .setSortBy(sortBy)
+            .build()
+            .buildUrl()
         loadNews(queryUrl)
     }
 
@@ -47,14 +55,15 @@ class NewsManager(
                     }
                 } else {
                     Log.d("NewsManager", "News response is null")
+                    (context as MainActivity).showNoNewsFragment()
                 }
-//                binding.progressBar.isVisible = false
+                binding.progressBar.isVisible = false
                 binding.swipeRefresh.isRefreshing = false
             }
 
             override fun onFailure(call: Call<News>, t: Throwable) {
                 Log.d("NewsManager", "Error: ${t.message}")
-//                binding.progressBar.isVisible = false
+                binding.progressBar.isVisible = false
                 binding.swipeRefresh.isRefreshing = false
             }
         })

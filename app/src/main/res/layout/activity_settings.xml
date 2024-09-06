@@ -7,7 +7,7 @@
     style="@style/BACKGROUND"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".main.MainActivity">
 
     <!-- Toolbar with Back Button -->
     <androidx.appcompat.widget.Toolbar
@@ -15,7 +15,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
-        android:title="Settings"
+        android:title="@string/search_1"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:layout_constraintTop_toTopOf="parent"
@@ -37,7 +37,7 @@
         <TextView
             style="@style/TEXT"
             android:textSize="20sp"
-            android:text="Dark Mode"
+            android:text="@string/setting_2"
             android:layout_marginEnd="160dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -86,7 +86,7 @@
             style="@style/TEXT"
             android:textSize="20sp"
             android:layout_marginEnd="165dp"
-            android:text="Language"
+            android:text="@string/setting_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
