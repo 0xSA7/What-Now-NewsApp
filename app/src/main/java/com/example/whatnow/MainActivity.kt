@@ -1,7 +1,6 @@
 package com.example.whatnow
 
 import SearchFragment
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
@@ -9,13 +8,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import com.airbnb.lottie.LottieAnimationView
-import com.example.whatnow.api.APIBuilder
-import com.example.whatnow.api.Countries
-import com.example.whatnow.api.DefaultRetrofitFactory
-import com.example.whatnow.api.Languages
-import com.example.whatnow.api.NewsCallable
-import com.example.whatnow.api.SortBy
+import com.example.whatnow.UI.NoNewsFragment
+import com.example.whatnow.API.APIBuilder
+import com.example.whatnow.API.DefaultRetrofitFactory
+import com.example.whatnow.API.Languages
+import com.example.whatnow.API.NewsCallable
+import com.example.whatnow.API.NewsManager
 import com.example.whatnow.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), SearchFragment.OnSearchListener {

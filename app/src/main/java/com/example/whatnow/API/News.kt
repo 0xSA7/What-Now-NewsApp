@@ -1,4 +1,4 @@
-package com.example.whatnow
+package com.example.whatnow.API
 
 
 data class News(

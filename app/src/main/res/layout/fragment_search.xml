@@ -5,7 +5,8 @@
     android:layout_height="match_parent">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="350dp"
+        android:layout_width= "match_parent"
+        android:background="@drawable/background_light"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         app:cardCornerRadius="16dp"

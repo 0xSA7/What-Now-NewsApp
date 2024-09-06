@@ -1,4 +1,4 @@
-package com.example.whatnow.api
+package com.example.whatnow.API
 
 import android.util.Log
 import com.example.whatnow.BuildConfig
