@@ -1,120 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    style="@style/BACKGROUND"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="@drawable/brush_background"
     tools:context=".api.SettingAPI">
 
     <!-- Title TextView -->
     <TextView
         android:id="@+id/interestedIn_tv"
+        style="@style/TEXT"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:text="What are you interested in?"
+        android:textAlignment="center"
         android:textAppearance="?attr/textAppearanceHeadline6"
         android:textColor="@color/black"
-        android:textAlignment="center"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Categories Section -->
     <TextView
         android:id="@+id/categories_tv"
         android:layout_width="0dp"
+        style="@style/TEXT"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:text="• Categories"
-        android:textStyle="bold"
         android:textAppearance="?attr/textAppearanceSubtitle1"
         android:textColor="@color/black"
-        android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@id/interestedIn_tv"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/interestedIn_tv" />
 
     <Spinner
         android:id="@+id/categories_spinner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/categories_tv"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/categories_tv" />
 
     <!-- Country Section -->
     <TextView
         android:id="@+id/country_tv"
         android:layout_width="0dp"
+        style="@style/TEXT"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="• Country"
-        android:textStyle="bold"
         android:textAppearance="?attr/textAppearanceSubtitle1"
         android:textColor="@color/black"
-        android:layout_marginTop="32dp"
-        app:layout_constraintTop_toBottomOf="@id/categories_spinner"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/categories_spinner" />
 
     <Spinner
         android:id="@+id/country_spinner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/country_tv"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/country_tv" />
 
     <!-- Topics Section -->
     <TextView
         android:id="@+id/topic_tv"
+        style="@style/TEXT"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="• Topics"
-        android:textStyle="bold"
         android:textAppearance="?attr/textAppearanceSubtitle1"
         android:textColor="@color/black"
-        android:layout_marginTop="32dp"
-        app:layout_constraintTop_toBottomOf="@id/country_spinner"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/country_spinner" />
 
     <EditText
         android:id="@+id/topic_et"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Enter a topic"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_edittext"
+        android:hint="Enter a topic"
+        style="@style/TEXT"
         android:padding="12dp"
+        android:textAppearance="?attr/textAppearanceBody1"
         android:textColor="@color/black"
         android:textColorHint="@color/gray"
-        android:textAppearance="?attr/textAppearanceBody1"
-        app:layout_constraintTop_toBottomOf="@id/topic_tv"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
+        app:layout_constraintTop_toBottomOf="@id/topic_tv" />
 
 
     <Button
         android:id="@+id/submit"
-        style="@style/Widget.AppCompat.Button.Borderless"
+        style="@style/BUTTON"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="@drawable/button_background_outline"
         android:text="Submit"
         android:textAllCaps="false"
         android:textColor="@color/black"
-        android:background="@drawable/button_background_outline"
-        app:layout_constraintTop_toBottomOf="@id/topic_et"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topic_et" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

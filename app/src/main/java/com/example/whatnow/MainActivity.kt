@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity(), SearchFragment.OnSearchListener {
         val retrofit = DefaultRetrofitFactory().createRetrofit()
         val newsCallable = retrofit.create(NewsCallable::class.java)
         newsManager = NewsManager(this, binding, newsCallable)
+
         val query = APIBuilder.topHeadlinesCall()
         newsManager.loadNews(query)
         binding.swipeRefresh.setOnRefreshListener { newsManager.loadNews(query) }

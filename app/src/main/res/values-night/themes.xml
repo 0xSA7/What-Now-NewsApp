@@ -4,4 +4,26 @@
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
+    <!--use this styles to change app from light mode to dark mode-->
+
+    <!--Dark Mode-->
+
+    <!--use this style when to use any view has text-->
+    <style name="TEXT">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+    <!--use this style when to use any icon in android:tint=""-->
+    <item name="colorOnSecondary" type="color">@color/black</item>
+
+    <!--use this style when to use button-->
+    <style name="BUTTON">
+        <item name="android:background">#0B3B64</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+    </style>
+
+    <!--use this style when to use any background-->
+    <style name="BACKGROUND">
+        <item name="android:background">@drawable/background_night</item>
+    </style>
+
 </resources>

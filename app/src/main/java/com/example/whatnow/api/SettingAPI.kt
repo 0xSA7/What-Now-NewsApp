@@ -1,6 +1,7 @@
 package com.example.whatnow.api
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.widget.ArrayAdapter
@@ -55,6 +56,8 @@ class SettingAPI : AppCompatActivity() {
                 .split(" ")
                 .filter { it.isNotEmpty() }
                 .joinToString("+") { it.replace(Regex("[^A-Za-z0-9]"), "") }
+
+
             val query = APIBuilder.topHeadlinesCall(
                 country = Countries.returnAsEnum(
                     countrySpinner.selectedItem.toString().uppercase()
@@ -64,7 +67,10 @@ class SettingAPI : AppCompatActivity() {
                 ),
                 q = topics
             )
-            Log.d("SettingAPI", "Query: $query")
+            val sharedPreferences: SharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
+            editor.putString("query", query)
+            editor.apply()
             startActivity(Intent(this, MainActivity::class.java).putExtra("query", query))
         }
     }
