@@ -21,7 +21,6 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-
         val enterAnimation = AnimationUtils.loadAnimation(this, R.anim.img_enter_animation)
         val exitAnimation = AnimationUtils.loadAnimation(this, R.anim.exit_animation)
         val rootLayout = findViewById<View>(R.id.splash)
