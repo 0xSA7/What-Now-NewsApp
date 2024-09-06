@@ -83,13 +83,13 @@
         android:textSize="16sp"
         android:layout_marginBottom="24dp" />
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/progress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:lottie_url="@string/lottie_url"
-        android:layout_gravity="center"
-        android:visibility="gone"
-        tools:visibility="visible" />
+<!--    <com.airbnb.lottie.LottieAnimationView-->
+<!--        android:id="@+id/progress"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:lottie_url="@string/lottie_url"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:visibility="gone"-->
+<!--        tools:visibility="visible" />-->
 
 </LinearLayout>

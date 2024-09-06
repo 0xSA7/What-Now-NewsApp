@@ -48,13 +48,13 @@ class NewsManager(
                 } else {
                     Log.d("NewsManager", "News response is null")
                 }
-                binding.progressBar.isVisible = false
+//                binding.progressBar.isVisible = false
                 binding.swipeRefresh.isRefreshing = false
             }
 
             override fun onFailure(call: Call<News>, t: Throwable) {
                 Log.d("NewsManager", "Error: ${t.message}")
-                binding.progressBar.isVisible = false
+//                binding.progressBar.isVisible = false
                 binding.swipeRefresh.isRefreshing = false
             }
         })

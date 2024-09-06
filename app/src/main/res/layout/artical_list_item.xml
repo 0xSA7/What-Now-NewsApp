@@ -69,7 +69,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="8dp"
-            android:src="@drawable/share"
+            android:src="@drawable/ic_share"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/favorite_btn"
             app:layout_constraintTop_toTopOf="@id/shadow_view" />
