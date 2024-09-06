@@ -9,7 +9,10 @@ plugins {
 android {
     namespace = "com.example.whatnow"
     compileSdk = 34
-    buildFeatures { viewBinding = true }
+    buildFeatures { viewBinding = true
+        //noinspection DataBindingWithoutKapt
+        dataBinding = true
+    }
 
     defaultConfig {
         applicationId = "com.example.whatnow"
@@ -60,6 +63,12 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:33.2.0"))
     implementation ("com.google.android.material:material:1.9.0")
     implementation("com.google.firebase:firebase-auth")
+
+    implementation ("com.airbnb.android:lottie:3.4.0")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+
+    implementation( "com.ramotion.foldingcell:folding-cell:1.2.3")
 
 
 }

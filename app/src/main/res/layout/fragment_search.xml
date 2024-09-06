@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="600dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edit_query"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="What are you looking for?" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/search_options"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Advanced Search options:"
+                app:layout_constraintEnd_toEndOf="@id/edit_query"
+                app:layout_constraintStart_toStartOf="@id/edit_query"
+                app:layout_constraintTop_toBottomOf="@id/edit_query" />
+
+            <TextView
+                android:id="@+id/sortBy_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sort By:"
+                app:layout_constraintStart_toStartOf="@id/sort_by_rg"
+                app:layout_constraintTop_toBottomOf="@id/search_options" />
+
+            <RadioGroup
+                android:id="@+id/sort_by_rg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkedButton="@id/sort_by_date_rb"
+                android:orientation="vertical"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sortBy_tv">
+
+                <RadioButton
+                    android:id="@+id/sort_by_date_rb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sort by Date" />
+
+                <RadioButton
+                    android:id="@+id/sort_by_relevance_rb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Relevant" />
+
+                <RadioButton
+                    android:id="@+id/sort_by_popularity_rb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Popularity" />
+            </RadioGroup>
+
+            <Spinner
+                android:id="@+id/Language_Spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="@id/sort_by_rg"
+                app:layout_constraintStart_toStartOf="@id/sort_by_rg"
+                app:layout_constraintTop_toBottomOf="@id/sort_by_rg" />
+
+            <TextView
+                android:id="@+id/from_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Language_Spinner" />
+
+            <ImageButton
+                android:id="@+id/from_date_ib"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/brush_background"
+                android:src="@drawable/ic_calender"
+                app:layout_constraintStart_toEndOf="@id/from_date_tv"
+                app:layout_constraintTop_toBottomOf="@id/Language_Spinner" />
+
+            <TextView
+                android:id="@+id/selected_from_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/from_date_ib"
+                app:layout_constraintTop_toTopOf="@id/from_date_ib" />
+
+            <TextView
+                android:id="@+id/to_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/from_date_tv" />
+
+            <ImageButton
+                android:id="@+id/to_date_ib"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/brush_background"
+                android:src="@drawable/ic_calender"
+                app:layout_constraintStart_toEndOf="@id/to_date_tv"
+                app:layout_constraintTop_toBottomOf="@id/from_date_ib" />
+
+            <TextView
+                android:id="@+id/selected_to_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/to_date_ib"
+                app:layout_constraintTop_toBottomOf="@id/selected_from_date_tv" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/find_btn"
+                android:text="Find!"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

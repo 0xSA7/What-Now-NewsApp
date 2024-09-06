@@ -1,23 +1,27 @@
 package com.example.whatnow
 
+import SearchFragment
+import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
+import com.airbnb.lottie.LottieAnimationView
+import com.example.whatnow.api.APIBuilder
+import com.example.whatnow.api.Countries
+import com.example.whatnow.api.DefaultRetrofitFactory
+import com.example.whatnow.api.Languages
+import com.example.whatnow.api.NewsCallable
+import com.example.whatnow.api.SortBy
 import com.example.whatnow.databinding.ActivityMainBinding
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), SearchFragment.OnSearchListener {
     private lateinit var binding: ActivityMainBinding
+    private lateinit var newsManager: NewsManager
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -27,41 +31,50 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        loadNews()
-        binding.swipeRefresh.setOnRefreshListener { loadNews() }
-    }
 
-    private fun loadNews() {
-        val baseUrl= BuildConfig.API_baseUrl
-        val retrofit = Retrofit
-            .Builder()
-            .baseUrl(baseUrl)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
+        val retrofit = DefaultRetrofitFactory().createRetrofit()
         val newsCallable = retrofit.create(NewsCallable::class.java)
-        val news = newsCallable.getNews()
-        news.enqueue(object : Callback<News> {
-            override fun onResponse(call: Call<News>, response: Response<News>) {
-                val news = response.body()
-                val adapter = news?.articles!!
-                adapter.removeAll {
-                    it.title == "[Removed]"
-                }
-                showNews(adapter)
-                binding.progressBar.isVisible = false
-                binding.swipeRefresh.isRefreshing = false
-            }
+        newsManager = NewsManager(this, binding, newsCallable)
+        val query = APIBuilder.topHeadlinesCall()
+        newsManager.loadNews(query)
+        binding.swipeRefresh.setOnRefreshListener { newsManager.loadNews(query) }
 
-            override fun onFailure(call: Call<News>, t: Throwable) {
-                Log.e("MainActivity", "Error: ${t.message}")
-                binding.progressBar.isVisible = false
-                binding.swipeRefresh.isRefreshing = false
-            }
-        })
+        if (intent.getBooleanExtra("openSearchFragment", false)) {
+            openSearchFragment()
+        }
+        val openSearchBtn: ImageButton = findViewById(R.id.search_ib)
+        openSearchBtn.setOnClickListener {
+            openSearchFragment()
+        }
+
     }
 
-    private fun showNews(articles: ArrayList<Articles>) {
-        val adapter = NewsAdapter(this, articles)
-        binding.newsList.adapter = adapter
+    private fun openSearchFragment() {
+        val searchFragment = SearchFragment()
+        supportFragmentManager.beginTransaction()
+            .setCustomAnimations(
+                R.anim.enter_from_right,
+                R.anim.exit_to_left,
+                R.anim.enter_from_right,
+                R.anim.exit_to_left
+            )
+            .replace(R.id.fragment_container, searchFragment)
+            .addToBackStack(null)
+            .commit()
     }
+    fun showNoNewsFragment() {
+        replaceFragment(NoNewsFragment())
+    }
+    private fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, fragment)
+            .addToBackStack(null)
+            .commit()
+    }
+
+    override fun onSearch(query: String, language: String, fromDate: String, toDate: String) {
+        val selectedLanguage = Languages.returnAsEnum(language)
+        newsManager.performSearch(query, language = selectedLanguage, from = fromDate, to = toDate)
+    }
+
 }

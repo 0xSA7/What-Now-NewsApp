@@ -1,5 +1,60 @@
 <resources>
     <string name="app_name">What Now!</string>
+    <string name="lottie_url">https://lottie.host/cc04d862-3d3d-4167-a229-df440dbf0d41/ogbeuXTkK8.json</string>
+    <string-array name="countries_array">
+        <item>Select a country</item>
+        <item>Argentina</item>
+        <item>Australia</item>
+        <item>Austria</item>
+        <item>Belgium</item>
+        <item>Brazil</item>
+        <item>Canada</item>
+        <item>China</item>
+        <item>Egypt</item>
+        <item>Germany</item>
+        <item>Hungary</item>
+        <item>Italy</item>
+        <item>Japan</item>
+        <item>Malaysia</item>
+        <item>Morocco</item>
+        <item>Norway</item>
+        <item>Poland</item>
+        <item>Russia</item>
+        <item>Saudi_Arabia</item>
+        <item>Singapore</item>
+        <item>Switzerland</item>
+        <item>Turkey</item>
+        <item>UAE</item>
+        <item>United Kingdom</item>
+        <item>USA</item>
+    </string-array>
+    <string-array name="categories_array">
+        <item>Select a category</item>
+        <item>Business</item>
+        <item>Entertainment</item>
+        <item>General</item>
+        <item>Health</item>
+        <item>Science</item>
+        <item>Sports</item>
+        <item>Technology</item>
+    </string-array>
+    <string-array name="languages_array">
+        <item>Select a language</item>
+        <item>Arabic</item>
+        <item>German</item>
+        <item>English</item>
+        <item>Spanish</item>
+        <item>French</item>
+        <item>Italian</item>
+        <item>Dutch</item>
+        <item>Norwegian</item>
+        <item>Portuguese</item>
+        <item>Russian</item>
+        <item>Swedish</item>
+        <item>Urdu</item>
+        <item>Chinese</item>
+    </string-array>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     //onboarding
         //Headings
