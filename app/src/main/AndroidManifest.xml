@@ -16,16 +16,16 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".SettingsActivity"
+            android:name=".UI.SettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".api.SearchFragment"
+            android:name=".API.SearchFragment"
             android:exported="false" />
         <activity
-            android:name=".SignInActivity"
+            android:name=".FirebaseAuth.SignInActivity"
             android:exported="false" />
         <activity
-            android:name=".SignupActivity"
+            android:name=".FirebaseAuth.SignupActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -36,7 +36,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".api.SettingAPI" />
+        <activity android:name=".API.SettingAPI" />
 
         <meta-data
             android:name="preloaded_fonts"

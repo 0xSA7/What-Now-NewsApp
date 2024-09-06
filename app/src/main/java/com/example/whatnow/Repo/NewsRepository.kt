@@ -1,9 +1,7 @@
-package com.example.whatnow
+package com.example.whatnow.Repo
 
-import com.example.whatnow.api.NewsCallable
-import com.example.whatnow.api.RetrofitFactory
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
+import com.example.whatnow.API.NewsCallable
+import com.example.whatnow.API.RetrofitFactory
 
 class NewsRepository(private val retrofitFactory: RetrofitFactory) {
 

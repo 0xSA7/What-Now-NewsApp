@@ -1,4 +1,4 @@
-package com.example.whatnow.api
+package com.example.whatnow.API
 
 enum class SortBy(val value: String) {
     RELEVANCY("relevancy"),

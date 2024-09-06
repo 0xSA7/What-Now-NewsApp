@@ -1,5 +1,5 @@
 // File: app/src/main/java/com/example/whatnow/api/DefaultRetrofitFactory.kt
-package com.example.whatnow.api
+package com.example.whatnow.API
 
 import com.example.whatnow.BuildConfig
 import retrofit2.Retrofit
