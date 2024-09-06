@@ -16,27 +16,18 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".SettingsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".api.SearchFragment"
-            android:exported="false" />
-        <activity
-            android:name=".SignInActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SignupActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Onboarding" />
+        <activity android:name=".SignInActivity" />
+        <activity android:name=".SignupActivity" />
         <activity android:name=".api.SettingAPI" />
+        <activity android:name=".MainActivity"/>
 
         <meta-data
             android:name="preloaded_fonts"
