@@ -1,4 +1,4 @@
-package com.example.whatnow.Adapter
+package com.example.whatnow
 
 import android.content.Context
 import android.content.Intent
@@ -11,8 +11,6 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import com.example.whatnow.API.Articles
-import com.example.whatnow.R
 import com.example.whatnow.databinding.ArticalListItemBinding
 
 class NewsAdapter(val activity: Context, val newsList: ArrayList<Articles>) :

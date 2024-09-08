@@ -1,4 +1,4 @@
-package com.example.whatnow.API
+package com.example.whatnow.api
 
 enum class Categories(val code: String) {
     BUSINESS("business"),

@@ -1,4 +1,4 @@
-package com.example.whatnow.API
+package com.example.whatnow.api
 
 enum class Countries(val code: String) {
     ARGENTINA("ar"),
