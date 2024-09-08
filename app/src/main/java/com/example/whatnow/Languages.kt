@@ -1,4 +1,4 @@
-package com.example.whatnow.api
+package com.example.whatnow
 
 
 enum class Languages(val code: String) {
@@ -25,7 +25,7 @@ enum class Languages(val code: String) {
 
                     }
                 }
-                return Languages.None
+                return None
             }
     }
 }

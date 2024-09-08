@@ -113,9 +113,8 @@
 //        }
 //    }
 //}
-package com.example.whatnow.api
+package com.example.whatnow
 
-import com.example.whatnow.BuildConfig
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
 

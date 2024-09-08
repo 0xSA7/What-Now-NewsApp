@@ -1,5 +1,5 @@
 // File: app/src/main/java/com/example/whatnow/api/RetrofitFactory.kt
-package com.example.whatnow.api
+package com.example.whatnow
 
 import retrofit2.Retrofit
 

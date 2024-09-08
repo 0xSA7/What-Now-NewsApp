@@ -1,4 +1,4 @@
-package com.example.whatnow.firebase_auth
+package com.example.whatnow
 
 import android.content.Intent
 import android.os.Bundle

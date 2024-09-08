@@ -12,7 +12,7 @@
     android:paddingTop="32dp"
     android:paddingEnd="24dp"
     android:paddingBottom="32dp"
-    tools:context=".main.MainActivity">
+    tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/email_et"
