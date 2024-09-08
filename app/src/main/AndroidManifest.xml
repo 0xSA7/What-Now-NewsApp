@@ -27,7 +27,7 @@
         <activity android:name=".Onboarding" />
         <activity android:name=".SignInActivity" />
         <activity android:name=".SignupActivity" />
-        <activity android:name=".SettingAPI" />
+        <activity android:name=".API.SettingAPI" />
         <activity android:name=".MainActivity"/>
 
         <meta-data

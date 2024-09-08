@@ -1,4 +1,4 @@
-package com.example.whatnow
+package com.example.whatnow.API
 
 import android.app.DatePickerDialog
 import android.content.Context
@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.example.whatnow.R
 import com.example.whatnow.databinding.FragmentSearchBinding
 import java.text.SimpleDateFormat
 import java.util.Calendar

@@ -1,5 +1,7 @@
 package com.example.whatnow
 
+import com.example.whatnow.API.RetrofitFactory
+
 class NewsRepository(private val retrofitFactory: RetrofitFactory) {
 
     private val newsCallable: NewsCallable

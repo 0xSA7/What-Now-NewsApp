@@ -1,6 +1,7 @@
 // File: app/src/main/java/com/example/whatnow/api/DefaultRetrofitFactory.kt
-package com.example.whatnow
+package com.example.whatnow.API
 
+import com.example.whatnow.BuildConfig
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
