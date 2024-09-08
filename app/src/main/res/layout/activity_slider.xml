@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/brush_background"
-    tools:context=".MainActivity">
+    tools:context=".core.ui.MainActivity">
 
     <Button
         android:id="@+id/skipButton"

@@ -1,11 +1,15 @@
-package com.example.whatnow
+package com.example.whatnow.news.data
 
 import android.content.Context
 import android.util.Log
 import androidx.core.view.isVisible
-import com.example.whatnow.API.Languages
-import com.example.whatnow.API.SortBy
+import com.example.whatnow.BuildConfig
+import com.example.whatnow.core.ui.MainActivity
+import com.example.whatnow.core.api.APIBuilder
+import com.example.whatnow.core.data.Languages
+import com.example.whatnow.core.data.SortBy
 import com.example.whatnow.databinding.ActivityMainBinding
+import com.example.whatnow.news.ui.NewsAdapter
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

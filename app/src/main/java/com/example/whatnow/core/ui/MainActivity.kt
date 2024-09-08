@@ -1,4 +1,4 @@
-package com.example.whatnow
+package com.example.whatnow.core.ui
 
 import android.os.Bundle
 import android.widget.ImageButton
@@ -7,11 +7,17 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import com.example.whatnow.API.Countries
-import com.example.whatnow.API.DefaultRetrofitFactory
-import com.example.whatnow.API.Languages
-import com.example.whatnow.API.SearchFragment
+import com.example.whatnow.BuildConfig
+import com.example.whatnow.R
+import com.example.whatnow.core.api.APIBuilder
+import com.example.whatnow.core.data.Countries
+import com.example.whatnow.core.api.DefaultRetrofitFactory
+import com.example.whatnow.core.data.Languages
+import com.example.whatnow.news.ui.SearchFragment
 import com.example.whatnow.databinding.ActivityMainBinding
+import com.example.whatnow.news.data.NewsCallable
+import com.example.whatnow.news.data.NewsManager
+import com.example.whatnow.news.ui.NoNewsFragment
 
 class MainActivity : AppCompatActivity(), SearchFragment.OnSearchListener {
     private lateinit var binding: ActivityMainBinding

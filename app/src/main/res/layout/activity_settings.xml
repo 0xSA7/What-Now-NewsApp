@@ -7,7 +7,7 @@
     style="@style/BACKGROUND"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".core.ui.MainActivity">
 
     <!-- Toolbar with Back Button -->
     <androidx.appcompat.widget.Toolbar

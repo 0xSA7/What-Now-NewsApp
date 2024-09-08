@@ -1,6 +1,6 @@
-package com.example.whatnow
+package com.example.whatnow.news.data
 
-import com.example.whatnow.API.RetrofitFactory
+import com.example.whatnow.core.api.RetrofitFactory
 
 class NewsRepository(private val retrofitFactory: RetrofitFactory) {
 

@@ -1,4 +1,4 @@
-package com.example.whatnow
+package com.example.whatnow.auth
 
 import android.content.Intent
 import android.os.Bundle

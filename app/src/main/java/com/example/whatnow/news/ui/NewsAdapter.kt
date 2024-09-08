@@ -1,4 +1,4 @@
-package com.example.whatnow
+package com.example.whatnow.news.ui
 
 
 import android.content.Context
@@ -12,7 +12,9 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.example.whatnow.R
 import com.example.whatnow.databinding.ArticalListItemBinding
+import com.example.whatnow.news.data.Articles
 
 class NewsAdapter(val activity: Context, val newsList: ArrayList<Articles>) :
     Adapter<NewsAdapter.NewsViewHolder>() {

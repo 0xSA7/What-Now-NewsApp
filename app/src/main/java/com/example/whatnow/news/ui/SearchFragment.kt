@@ -1,4 +1,4 @@
-package com.example.whatnow.API
+package com.example.whatnow.news.ui
 
 import android.app.DatePickerDialog
 import android.content.Context

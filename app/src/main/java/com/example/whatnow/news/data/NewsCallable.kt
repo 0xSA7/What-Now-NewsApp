@@ -1,4 +1,4 @@
-package com.example.whatnow
+package com.example.whatnow.news.data
 
 import retrofit2.Call
 import retrofit2.http.GET

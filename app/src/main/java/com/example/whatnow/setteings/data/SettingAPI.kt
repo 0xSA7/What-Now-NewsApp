@@ -1,4 +1,4 @@
-package com.example.whatnow.API
+package com.example.whatnow.setteings.data
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -9,10 +9,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.whatnow.APIBuilder
 import com.example.whatnow.BuildConfig
-import com.example.whatnow.MainActivity
+import com.example.whatnow.core.ui.MainActivity
 import com.example.whatnow.R
+import com.example.whatnow.core.api.APIBuilder
+import com.example.whatnow.core.data.Categories
+import com.example.whatnow.core.data.Countries
 import com.example.whatnow.databinding.ActivitySettingApiBinding
 
 class SettingAPI : AppCompatActivity() {
@@ -58,7 +60,7 @@ class SettingAPI : AppCompatActivity() {
                 .filter { it.isNotEmpty() }
                 .joinToString("+") { it.replace(Regex("[^A-Za-z0-9]"), "") }
 
-            var queryUrl = APIBuilder.Builder(BuildConfig.API_Topics_Top_Headlines)
+            val queryUrl = APIBuilder.Builder(BuildConfig.API_Topics_Top_Headlines)
                 .setCountry(
                     Countries.returnAsEnum(
                         countrySpinner.selectedItem.toString().uppercase()
@@ -72,22 +74,11 @@ class SettingAPI : AppCompatActivity() {
                 .setQuery(topics)
                 .build()
                 .buildUrl()
-            if (queryUrl == APIBuilder.Builder(BuildConfig.API_Topics_Top_Headlines)
-                    .setCountry(Countries.None)
-                    .setCategory(Categories.None)
-                    .setQuery("")
-                    .build()
-                    .buildUrl()
-            ) queryUrl =
-                APIBuilder.Builder(BuildConfig.API_Topics_Top_Headlines).setCountry(Countries.US)
-                    .build()
-                    .buildUrl()
-
             val sharedPreferences: SharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
             val editor = sharedPreferences.edit()
             editor.putString("query", queryUrl)
             editor.apply()
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java).putExtra("query", queryUrl))
         }
     }
 }
