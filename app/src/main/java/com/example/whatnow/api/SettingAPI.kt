@@ -1,8 +1,9 @@
-package com.example.whatnow.API
+package com.example.whatnow.api
 
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.activity.enableEdgeToEdge

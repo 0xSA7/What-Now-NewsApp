@@ -16,7 +16,7 @@
 
     <EditText
         android:id="@+id/email_et"
-        android:layout_width="360dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/rectangular_edit_text"
@@ -31,7 +31,7 @@
 
     <EditText
         android:id="@+id/password_et"
-        android:layout_width="360dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/rectangular_edit_text"
@@ -57,7 +57,7 @@
 
     <Button
         android:id="@+id/login_btn"
-        android:layout_width="360dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="#2196F3"
