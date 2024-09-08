@@ -115,6 +115,10 @@
 //}
 package com.example.whatnow
 
+import com.example.whatnow.API.Categories
+import com.example.whatnow.API.Countries
+import com.example.whatnow.API.Languages
+import com.example.whatnow.API.SortBy
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
 

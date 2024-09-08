@@ -1,4 +1,4 @@
-package com.example.whatnow
+package com.example.whatnow.API
 
 
 enum class Languages(val code: String) {

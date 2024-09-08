@@ -7,6 +7,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import com.example.whatnow.API.Countries
+import com.example.whatnow.API.DefaultRetrofitFactory
+import com.example.whatnow.API.Languages
+import com.example.whatnow.API.SearchFragment
 import com.example.whatnow.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), SearchFragment.OnSearchListener {
