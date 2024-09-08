@@ -35,6 +35,7 @@ class SignInActivity : AppCompatActivity() {
 
         // Initialize Firebase Auth
         auth = Firebase.auth
+        // Initialize sharedPreferences
         sharedPreferences = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
 
         loaduserdata()

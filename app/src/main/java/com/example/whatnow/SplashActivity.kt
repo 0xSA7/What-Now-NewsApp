@@ -1,4 +1,4 @@
-package com.example.whatnow.ui
+package com.example.whatnow
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -10,9 +10,6 @@ import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.whatnow.R
-import com.example.whatnow.firebase_auth.SignInActivity
-import com.example.whatnow.firebase_auth.SignupActivity
 
 class SplashActivity : AppCompatActivity() {
 

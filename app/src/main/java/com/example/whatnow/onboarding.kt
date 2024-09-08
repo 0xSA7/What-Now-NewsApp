@@ -1,4 +1,4 @@
-package com.example.whatnow.ui
+package com.example.whatnow
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -7,8 +7,6 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.ViewFlipper
 import androidx.appcompat.app.AppCompatActivity
-import com.example.whatnow.R
-import com.example.whatnow.firebase_auth.SignupActivity
 
 class Onboarding : AppCompatActivity() {
 

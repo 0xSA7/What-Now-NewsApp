@@ -37,14 +37,18 @@ class MainActivity : AppCompatActivity(), SearchFragment.OnSearchListener {
         val newsCallable = retrofit.create(NewsCallable::class.java)
         newsManager = NewsManager(this, binding, newsCallable)
 
-
-        val query =
-            if (getSharedPreferences("UserPrefs", MODE_PRIVATE).getString("query", "") != "") {
-                getSharedPreferences("UserPrefs", MODE_PRIVATE).getString("query", "")!!
-            } else APIBuilder.Builder(BuildConfig.API_Topics_Top_Headlines)
-                .setCountry(Countries.US)
-                .build()
-                .buildUrl()
+//
+//        val query =
+//            if (getSharedPreferences("UserPrefs", MODE_PRIVATE).getString("query", "") != "") {
+//                getSharedPreferences("UserPrefs", MODE_PRIVATE).getString("query", "")!!
+//            } else APIBuilder.Builder(BuildConfig.API_Topics_Top_Headlines)
+//                .setCountry(Countries.US)
+//                .build()
+//                .buildUrl()
+        val query = intent.getStringExtra("query") ?: APIBuilder.Builder(BuildConfig.API_Topics_Top_Headlines)
+            .setCountry(Countries.US)
+            .build()
+            .buildUrl()
         newsManager.loadNews(query)
         binding.swipeRefresh.setOnRefreshListener { newsManager.loadNews(query) }
 
