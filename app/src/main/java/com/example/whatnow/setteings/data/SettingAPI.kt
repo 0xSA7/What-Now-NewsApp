@@ -1,7 +1,6 @@
 package com.example.whatnow.setteings.data
 
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Spinner
@@ -59,26 +58,25 @@ class SettingAPI : AppCompatActivity() {
                 .split(" ")
                 .filter { it.isNotEmpty() }
                 .joinToString("+") { it.replace(Regex("[^A-Za-z0-9]"), "") }
+            var selectedCountry =
+                Countries.returnAsEnum(countrySpinner.selectedItem.toString().uppercase())
+            val selectedCategory =
+                Categories.returnAsEnum(categoriesSpinner.selectedItem.toString().uppercase())
+            if (selectedCategory==Categories.None && selectedCountry==Countries.None && topics.isEmpty()) {
+                selectedCountry = Countries.US
+            }
 
-            val queryUrl = APIBuilder.Builder(BuildConfig.API_Topics_Top_Headlines)
-                .setCountry(
-                    Countries.returnAsEnum(
-                        countrySpinner.selectedItem.toString().uppercase()
-                    )
-                )
-                .setCategory(
-                    Categories.returnAsEnum(
-                        categoriesSpinner.selectedItem.toString().uppercase()
-                    )
-                )
+            val request = APIBuilder.Builder(BuildConfig.API_Topics_Top_Headlines)
+                .setCountry(selectedCountry)
+                .setCategory(selectedCategory)
                 .setQuery(topics)
                 .build()
                 .buildUrl()
-            val sharedPreferences: SharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
-            val editor = sharedPreferences.edit()
-            editor.putString("query", queryUrl)
-            editor.apply()
-            startActivity(Intent(this, MainActivity::class.java).putExtra("query", queryUrl))
+//            val sharedPreferences: SharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+//            val editor = sharedPreferences.edit()
+//            editor.putString("query", queryUrl)
+//            editor.apply()
+            startActivity(Intent(this, MainActivity::class.java).putExtra("request", request))
         }
     }
 }

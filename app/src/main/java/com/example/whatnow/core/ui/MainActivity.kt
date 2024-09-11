@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity(), SearchFragment.OnSearchListener {
 //                .setCountry(Countries.US)
 //                .build()
 //                .buildUrl()
-        val query = intent.getStringExtra("query") ?: APIBuilder.Builder(BuildConfig.API_Topics_Top_Headlines)
+        val query = intent.getStringExtra("request") ?: APIBuilder.Builder(BuildConfig.API_Topics_Top_Headlines)
             .setCountry(Countries.US)
             .build()
             .buildUrl()

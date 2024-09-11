@@ -50,6 +50,7 @@ class NewsManager(
                         (context as MainActivity).showNoNewsFragment()
                     } else {
                         val adapter = news.articles
+                        adapter.removeAll{ it.title=="[Removed]" }
                         showNews(adapter)
                     }
                 } else {
