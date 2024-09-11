@@ -16,7 +16,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".auth.SplashActivity"
+            android:name=".core.ui.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".auth.Onboarding" />
+        <activity android:name=".core.ui.Onboarding" />
         <activity android:name=".auth.SignInActivity" />
         <activity android:name=".auth.SignupActivity" />
         <activity android:name=".setteings.data.SettingAPI" />
