@@ -30,17 +30,14 @@
     <string name="search_9"> البحث!</string>
 
 
-    <string name="heading_one">Quick &amp; Easy Payments</string>
-    <string name="heading_two">Instant Notifications</string>
-    <string name="heading_three">Cashless Payment</string>
-    <string name="heading_fourth">Pay Anywhere</string>
-
+    <string name="heading_one">أخبار يوم ييوم</string>
+    <string name="heading_two">إشعارات فورية</string>
 
     <string name="desc_one">زود معلوماتك بالأخبارنا</string>
     <string name="Sp_what_now">What Now</string>
     <string name="Sp_your_news_at_any_time">أخبار في أي وقت</string>
     <string name="news_image">news_Image</string>
     <string name="dots">...</string>
-    <string name="shareic">shareic</string>
+    <string name="share">shareic</string>
 
 </resources>
