@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/brush_background"
+    android:id="@+id/main"
+    style="@style/BACKGROUND"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -18,18 +18,19 @@
 
     <TextView
         android:id="@+id/no_news_tv"
-        android:layout_margin="16dp"
+        style="@style/TEXT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="No News Found." />
+        android:layout_margin="16dp"
+        android:text="@string/news_1" />
 
     <Button
         android:id="@+id/try_again_btn"
-        android:textColor="@color/black"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Try Another Search" />
+        android:text="@string/news_2"
+        android:textColor="@color/gray" />
 </LinearLayout>
