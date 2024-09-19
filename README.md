@@ -56,6 +56,12 @@ This project follows the **Multi-Modular Architecture** design with separation o
 - **Factory Pattern**:  Ritrofit
 
 ---
+## Screenshots
+|                                         Login                                          |                                            SettingAPI                                            |                                             Search For News                                              |
+|:--------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------:|
+| ![Login](https://github.com/0xSA7/What-Now-NewsApp/blob/Develop/screenshots/login.png) | ![SettingAPI](https://github.com/0xSA7/What-Now-NewsApp/blob/Develop/screenshots/settingAPI.png) | ![Search For News](https://github.com/0xSA7/What-Now-NewsApp/blob/Develop/screenshots/searchforNews.png) |
+
+---
 
 ## Installation
 
