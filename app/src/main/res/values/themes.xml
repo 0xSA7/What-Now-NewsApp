@@ -6,4 +6,23 @@
     </style>
 
     <style name="Theme.WhatNow" parent="Base.Theme.WhatNow" />
+    <!--use this styles to change app from dark mode to light mode-->
+
+    <!--Light Mode-->
+
+    <!--use this style when to use any view has text-->
+    <style name="TEXT">
+        <item name="android:textColor">#000000</item>
+    </style>
+    <!--use this style when to use any icon in android:tint=""-->
+    <item name="colorOnSecondary" type="color">@color/white</item>
+    <!--use this style when to use button-->
+    <style name="BUTTON">
+        <item name="android:background">#117CD9</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    <!--use this style when to use any background-->
+    <style name="BACKGROUND">
+        <item name="android:background">@drawable/background_light</item>
+    </style>
 </resources>

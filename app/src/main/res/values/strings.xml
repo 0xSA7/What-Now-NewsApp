@@ -1,3 +1,100 @@
 <resources>
-    <string name="app_name">What Now!</string>
+    <string name="app_name" translatable="false">What Now!</string>
+    <string name="lottie_url" translatable="false">https://lottie.host/f5bcb3a8-e3d7-48b3-9e2c-568d4171825f/eMH5BHxtpX.json</string>
+    <string-array name="countries_array">
+        <item>Select a country</item>
+        <item>Argentina</item>
+        <item>Australia</item>
+        <item>Austria</item>
+        <item>Belgium</item>
+        <item>Brazil</item>
+        <item>Canada</item>
+        <item>China</item>
+        <item>Egypt</item>
+        <item>Germany</item>
+        <item>Hungary</item>
+        <item>Italy</item>
+        <item>Japan</item>
+        <item>Malaysia</item>
+        <item>Morocco</item>
+        <item>Norway</item>
+        <item>Poland</item>
+        <item>Russia</item>
+        <item>Saudi_Arabia</item>
+        <item>Singapore</item>
+        <item>Switzerland</item>
+        <item>Turkey</item>
+        <item>UAE</item>
+        <item>United Kingdom</item>
+        <item>US</item>
+    </string-array>
+    <string-array name="categories_array">
+        <item>Select a category</item>
+        <item>Business</item>
+        <item>Entertainment</item>
+        <item>General</item>
+        <item>Health</item>
+        <item>Science</item>
+        <item>Sports</item>
+        <item>Technology</item>
+    </string-array>
+    <string-array name="languages_array">
+        <item>Select a language</item>
+        <item>Arabic</item>
+        <item>German</item>
+        <item>English</item>
+        <item>Spanish</item>
+        <item>French</item>
+        <item>Italian</item>
+        <item>Dutch</item>
+        <item>Norwegian</item>
+        <item>Portuguese</item>
+        <item>Russian</item>
+        <item>Swedish</item>
+        <item>Urdu</item>
+        <item>Chinese</item>
+    </string-array>
+
+        <string name="heading_one">Quick &amp; Daily News</string>
+        <string name="heading_two">Instant Notifications</string>
+
+        //Description
+        <string name="desc_one">Grow your Knowledge By our news app </string>
+
+    <string name="Sp_what_now">What Now</string>
+    <string name="Sp_your_news_at_any_time">Your News At Any Time</string>
+    <string name="news_image">news_Image</string>
+    <string name="dots">...</string>
+    <string name="share">share</string>
+    <string name="setting_api_1">What are you interested in?</string>
+    <string name="setting_api_2">• Categories</string>
+    <string name="setting_api_3">• Country</string>
+    <string name="setting_api_4">• Topics</string>
+    <string name="setting_api_5">Enter a topic</string>
+    <string name="setting_api_6">Submit</string>
+    <string name="setting_1">Settings</string>
+    <string name="setting_2">Dark Mode</string>
+    <string name="setting_3">Language</string>
+    <string name="sign_in_1">Email</string>
+    <string name="sign_in_2">Password</string>
+    <string name="sign_in_3">Forgot your password?</string>
+    <string name="sign_in_4">Login</string>
+    <string name="sign_in_5">Not a user?</string>
+    <string name="sign_up_1">Confirm Password</string>
+    <string name="sign_up_2">Sign Up</string>
+    <string name="sign_up_3">Already a user?</string>
+    <string name="news_1">No News Found.</string>
+    <string name="news_2">Try Another Search</string>
+    <string name="search_1">What are you looking for?</string>
+    <string name="search_2">Advanced Search options:</string>
+    <string name="search_3"> Sort By:</string>
+    <string name="search_4">Sort by Date</string>
+    <string name="search_5">Relevant</string>
+    <string name="search_6">Popularity</string>
+    <string name="search_7">From:</string>
+    <string name="search_8">To:</string>
+    <string name="search_9"> Find!</string>
+    <string name="select_from_date">Select From Date</string>
+    <string name="select_to_date">Select to Date</string>
+
 </resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="setting_api_1">ما الذي يثير اهتمامك؟</string>
+    <string name="setting_api_2"> • فئات</string>
+    <string name="setting_api_3">• دولة</string>
+    <string name="setting_api_4">• المواضيع</string>
+    <string name="setting_api_5">أدخل موضوعا</string>
+    <string name="setting_api_6">تحقق</string>
+    <string name="setting_1">الإعدادات</string>
+    <string name="setting_2">الوضع المظلم</string>
+    <string name="setting_3">اللغه</string>
+    <string name="sign_in_1">البريد الإلكتروني</string>
+    <string name="sign_in_2">كلمة المرور</string>
+    <string name="sign_in_3">نسيت كلمة المرور؟</string>
+    <string name="sign_in_4">تسجيل الدخول</string>
+    <string name="sign_in_5">ليس مستخدمًا؟</string>
+    <string name="sign_up_1">تأكيد كلمة المرور</string>
+    <string name="sign_up_2">التسجيل</string>
+    <string name="sign_up_3">هل أنت مستخدم بالفعل؟</string>
+    <string name="news_1">لم يتم العثور على أي أخبار.</string>
+    <string name="news_2">حاول البحث مرة أخرى</string>
+    <string name="search_1">ما الذي تبحث عنه؟</string>
+    <string name="search_2">خيارات البحث المتقدمة:</string>
+    <string name="search_3"> الترتيب حسب:</string>
+    <string name="search_4">الفرز حسب التاريخ</string>
+    <string name="search_5">ذات الصلة</string>
+    <string name="search_6">الشعبية</string>
+    <string name="search_7">من:</string>
+    <string name="search_8">الي:</string>
+    <string name="search_9"> البحث!</string>
+
+
+    <string name="heading_one">أخبار يوم ييوم</string>
+    <string name="heading_two">إشعارات فورية</string>
+
+    <string name="desc_one">زود معلوماتك بالأخبارنا</string>
+    <string name="Sp_what_now">What Now</string>
+    <string name="Sp_your_news_at_any_time">أخبار في أي وقت</string>
+    <string name="news_image">news_Image</string>
+    <string name="dots">...</string>
+    <string name="share">shareic</string>
+
+</resources>

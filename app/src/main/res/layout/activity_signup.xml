@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    style="@style/BACKGROUND"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingStart="24dp"
+    android:paddingTop="32dp"
+    android:paddingEnd="24dp"
+    android:paddingBottom="32dp">
+
+    <ImageView
+        android:id="@+id/cloud_image"
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:layout_marginBottom="32dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/email_et"
+        style="@style/TEXT"
+        android:layout_width="360dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rectangular_edit_text"
+        android:elevation="2dp"
+        android:hint="@string/sign_in_1"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="#757575"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/password_et"
+        style="@style/TEXT"
+        android:layout_width="360dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rectangular_edit_text"
+        android:elevation="2dp"
+        android:hint="@string/sign_in_2"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="#757575"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/con_pass_et"
+        style="@style/TEXT"
+        android:layout_width="360dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/rectangular_edit_text"
+        android:elevation="2dp"
+        android:hint="@string/sign_up_1"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="#757575"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/sign_up_btn"
+        style="@style/BUTTON"
+        android:layout_width="360dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#2196F3"
+        android:elevation="2dp"
+        android:text="@string/sign_up_2"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/already_user_tv"
+        style="@style/TEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+        android:text="@string/sign_up_3"
+        android:textColor="#2196F3"
+        android:textSize="16sp" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:lottie_url="@string/lottie_url"
+        tools:visibility="visible" />
+
+</LinearLayout>
